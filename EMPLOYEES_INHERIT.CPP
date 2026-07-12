@@ -8,7 +8,9 @@ class Employee{
         string name;
         int employeeID;
     public:
-    Employee(string empname,int empID):name(empname),employeeID(empID){}
+    Employee(string empname,int empID):name(empname),employeeID(empID){
+        cout << __FUNCTION__ << endl;
+    }
     void display()const{
         cout << "Employee: " << name << ", ID: " << employeeID << endl;
     }
@@ -27,5 +29,7 @@ void show(){
 };
 
 int main(){
-    
+    Employee A("ramu", 1);
+    A.display();
+    return 0;
 }
